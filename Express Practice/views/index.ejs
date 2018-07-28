@@ -1,0 +1,19 @@
+<% include partials/header%>
+    <h1>HELLO FROM EJS...</h1>
+    <h3>ADD USER</h3>
+    <form action="/user/add" method="post">
+    <label for="fName">First Name</label>
+    <input type="text" name="fName" placeholder="First name"/><br/>
+    <label for="lName">Last Name</label>
+    <input type="text" name="lName" placeholder="Last name"/><br/>
+    <label for="age">Age</label>
+    <input type="text" name="age" placeholder="Age"/><br/>
+    <input type="submit" value="Submit">
+    </form>
+    <% users.forEach(function(user){ %>
+        <li><%= user.fName %></li>
+        <li><%= user.lName %></li>
+        <li><%= user.age %></li>
+
+    <% }) %>
+<% include partials/footer%>
